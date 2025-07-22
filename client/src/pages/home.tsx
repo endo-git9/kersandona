@@ -317,9 +317,9 @@ export default function Home() {
             <div className="w-full h-full bg-gradient-to-br from-purple-900/10 to-transparent"></div>
           </div>
           
-          <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+          <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-8">
             <motion.div 
-              className="avatar-container mb-8 inline-block mt-4"
+              className="avatar-container mb-8 inline-block"
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
               transition={{ duration: 1, type: "spring" }}
@@ -328,7 +328,7 @@ export default function Home() {
                 <img 
                   src="https://media.cakeresume.com/image/upload/v1701816734/zwasyqdssjggl0kegz2y.jpg" 
                   alt="Endo Kersandona Avatar" 
-                  className="w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-game-teal shadow-xl shadow-game-teal/40 animate-float object-cover"
+                  className="w-36 h-36 md:w-44 md:h-44 rounded-full border-4 border-game-teal shadow-xl shadow-game-teal/40 animate-float object-cover"
                 />
                 <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-game-yellow to-game-teal px-3 py-1 rounded-full text-xs font-bold text-game-dark shadow-lg">
                   HERO
