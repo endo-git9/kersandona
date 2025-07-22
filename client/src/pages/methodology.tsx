@@ -142,8 +142,8 @@ export default function Methodology() {
               { id: 'feedback', label: 'Analytics', icon: 'fas fa-chart-pie' },
               { id: 'budget', label: 'Resources', icon: 'fas fa-coins' },
               { id: 'performance', label: 'Performance', icon: 'fas fa-chart-bar' },
-              { id: 'documents', label: 'BRD/PRD', icon: 'fas fa-file-alt' },
-              { id: 'testimonials', label: 'Testimonials', icon: 'fas fa-quote-left' }
+              { id: 'testimonials', label: 'Testimonials', icon: 'fas fa-quote-left' },
+              { id: 'documents', label: 'BRD/PRD', icon: 'fas fa-file-alt' }
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -455,6 +455,79 @@ export default function Methodology() {
             </motion.div>
           )}
 
+          {/* Testimonials */}
+          {activeTab === 'testimonials' && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="space-y-8"
+            >
+              <h2 className="text-3xl font-bold text-center text-game-teal mb-8">
+                <i className="fas fa-quote-left mr-4"></i>Client & Team Testimonials
+              </h2>
+              
+              <div className="max-w-4xl mx-auto">
+                <div className="rpg-dialog rounded-xl p-8">
+                  <motion.div
+                    key={currentTestimonial}
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -50 }}
+                    className="text-center"
+                  >
+                    <div className="mb-6">
+                      <i className="fas fa-quote-left text-4xl text-game-teal mb-4"></i>
+                      <p className="text-xl text-game-text italic leading-relaxed">
+                        "{testimonials[currentTestimonial].text}"
+                      </p>
+                    </div>
+                    
+                    <div className="border-t border-game-teal/30 pt-6">
+                      <p className="font-bold text-game-yellow text-lg">
+                        {testimonials[currentTestimonial].author}
+                      </p>
+                      <p className="text-game-purple">
+                        {testimonials[currentTestimonial].role} • {testimonials[currentTestimonial].year}
+                      </p>
+                    </div>
+                  </motion.div>
+                  
+                  <div className="flex justify-center space-x-4 mt-8">
+                    <button
+                      onClick={() => setCurrentTestimonial((prev) => 
+                        prev === 0 ? testimonials.length - 1 : prev - 1
+                      )}
+                      className="w-12 h-12 bg-game-teal/20 hover:bg-game-teal/40 rounded-full flex items-center justify-center transition-colors"
+                    >
+                      <i className="fas fa-chevron-left text-game-teal"></i>
+                    </button>
+                    
+                    <div className="flex space-x-2 items-center">
+                      {testimonials.map((_, index) => (
+                        <button
+                          key={index}
+                          onClick={() => setCurrentTestimonial(index)}
+                          className={`w-3 h-3 rounded-full transition-colors ${
+                            index === currentTestimonial ? 'bg-game-teal' : 'bg-game-teal/30'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                    
+                    <button
+                      onClick={() => setCurrentTestimonial((prev) => 
+                        prev === testimonials.length - 1 ? 0 : prev + 1
+                      )}
+                      className="w-12 h-12 bg-game-teal/20 hover:bg-game-teal/40 rounded-full flex items-center justify-center transition-colors"
+                    >
+                      <i className="fas fa-chevron-right text-game-teal"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
+
           {/* BRD/PRD Documents */}
           {activeTab === 'documents' && (
             <motion.div
@@ -624,79 +697,6 @@ export default function Methodology() {
                     </div>
                     <h4 className="font-bold text-game-yellow mb-2">Q3 2025</h4>
                     <p className="text-sm text-game-text">2FA security implementation and full platform launch</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          )}
-
-          {/* Testimonials */}
-          {activeTab === 'testimonials' && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="space-y-8"
-            >
-              <h2 className="text-3xl font-bold text-center text-game-teal mb-8">
-                <i className="fas fa-quote-left mr-4"></i>Client & Team Testimonials
-              </h2>
-              
-              <div className="max-w-4xl mx-auto">
-                <div className="rpg-dialog rounded-xl p-8">
-                  <motion.div
-                    key={currentTestimonial}
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -50 }}
-                    className="text-center"
-                  >
-                    <div className="mb-6">
-                      <i className="fas fa-quote-left text-4xl text-game-teal mb-4"></i>
-                      <p className="text-xl text-game-text italic leading-relaxed">
-                        "{testimonials[currentTestimonial].text}"
-                      </p>
-                    </div>
-                    
-                    <div className="border-t border-game-teal/30 pt-6">
-                      <p className="font-bold text-game-yellow text-lg">
-                        {testimonials[currentTestimonial].author}
-                      </p>
-                      <p className="text-game-purple">
-                        {testimonials[currentTestimonial].role} • {testimonials[currentTestimonial].year}
-                      </p>
-                    </div>
-                  </motion.div>
-                  
-                  <div className="flex justify-center space-x-4 mt-8">
-                    <button
-                      onClick={() => setCurrentTestimonial((prev) => 
-                        prev === 0 ? testimonials.length - 1 : prev - 1
-                      )}
-                      className="w-12 h-12 bg-game-teal/20 hover:bg-game-teal/40 rounded-full flex items-center justify-center transition-colors"
-                    >
-                      <i className="fas fa-chevron-left text-game-teal"></i>
-                    </button>
-                    
-                    <div className="flex space-x-2 items-center">
-                      {testimonials.map((_, index) => (
-                        <button
-                          key={index}
-                          onClick={() => setCurrentTestimonial(index)}
-                          className={`w-3 h-3 rounded-full transition-colors ${
-                            index === currentTestimonial ? 'bg-game-teal' : 'bg-game-teal/30'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                    
-                    <button
-                      onClick={() => setCurrentTestimonial((prev) => 
-                        prev === testimonials.length - 1 ? 0 : prev + 1
-                      )}
-                      className="w-12 h-12 bg-game-teal/20 hover:bg-game-teal/40 rounded-full flex items-center justify-center transition-colors"
-                    >
-                      <i className="fas fa-chevron-right text-game-teal"></i>
-                    </button>
                   </div>
                 </div>
               </div>
