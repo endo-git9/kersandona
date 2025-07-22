@@ -4,7 +4,7 @@ import { useScrollToLevel } from '@/hooks/useScrollToLevel';
 import { usePageView, useAnalytics } from '@/hooks/useAnalytics';
 import { ExperienceCard } from '@/components/ExperienceCard';
 import { SkillNode } from '@/components/SkillNode';
-
+import { PortfolioCard } from '@/components/PortfolioCard';
 import { ContactForm } from '@/components/ContactForm';
 
 export default function Home() {
@@ -158,7 +158,72 @@ export default function Home() {
     { name: "Odoo ERP", icon: "fas fa-database", color: "bg-green-600/20 border border-green-600/50" }
   ];
 
-
+  const portfolioProjects = [
+    {
+      title: "Digital Payment Gateway MVP",
+      description: "End-to-end secure payment gateway with API architecture and merchant onboarding, improving transaction efficiency.",
+      icon: "fas fa-credit-card",
+      iconColor: "from-green-500 to-emerald-600",
+      rarity: "Epic Quest",
+      rating: 5
+    },
+    {
+      title: "RAG AI WhatsApp Integration",
+      description: "Retrieval Augmented Generation AI solution automating customer interactions with improved response accuracy.",
+      icon: "fas fa-robot",
+      iconColor: "from-purple-500 to-violet-600",
+      rarity: "Legendary",
+      rating: 5
+    },
+    {
+      title: "Gold Trading POS System",
+      description: "Custom Point of Sale system for high-value gold trading with real-time inventory tracking and regulatory compliance.",
+      icon: "fas fa-coins",
+      iconColor: "from-yellow-500 to-amber-600",
+      rarity: "Epic Quest",
+      rating: 5
+    },
+    {
+      title: "Privy Digital Identity Platform",
+      description: "Led product strategy driving 30% revenue increase and 20% user growth with e-signature and e-stamp features.",
+      icon: "fas fa-id-card",
+      iconColor: "from-blue-500 to-cyan-600",
+      rarity: "Epic Quest",
+      rating: 5
+    },
+    {
+      title: "Banking Agile Transformation",
+      description: "Successfully transformed Bank Mandiri teams from Waterfall to Scrum, achieving 70% velocity boost and 95% defect reduction.",
+      icon: "fas fa-university",
+      iconColor: "from-blue-600 to-indigo-600",
+      rarity: "Legendary",
+      rating: 5
+    },
+    {
+      title: "Cybersecurity Solutions Suite",
+      description: "Enterprise security framework with PKI, digital signatures, mobile security, and payment HSM for multiple sectors.",
+      icon: "fas fa-shield-virus",
+      iconColor: "from-red-500 to-rose-600",
+      rarity: "Epic Quest",
+      rating: 4
+    },
+    {
+      title: "Multi-Industry Software Consulting",
+      description: "ITSM, ITAM, API management, LMS, and performance monitoring solutions across diverse enterprise clients.",
+      icon: "fas fa-code-branch",
+      iconColor: "from-indigo-500 to-purple-600",
+      rarity: "Rare Quest",
+      rating: 4
+    },
+    {
+      title: "Big Data & BI Analytics Platform",
+      description: "Data warehousing, business intelligence, and big data solutions providing actionable insights for enterprise clients.",
+      icon: "fas fa-chart-pie",
+      iconColor: "from-teal-500 to-green-600",
+      rarity: "Rare Quest",
+      rating: 4
+    }
+  ];
 
   const certifications = [
     { name: "Data Visualization for Data Analysis and Analytics (IIBA)", icon: "fas fa-chart-line" },
@@ -228,7 +293,8 @@ export default function Home() {
               <button onClick={() => scrollToLevel(1)} className="text-game-muted hover:text-game-teal transition-colors">Career</button>
               <button onClick={() => scrollToLevel(2)} className="text-game-muted hover:text-game-teal transition-colors">Skills</button>
               <button onClick={() => scrollToLevel(3)} className="text-game-muted hover:text-game-teal transition-colors">Education</button>
-              <button onClick={() => scrollToLevel(4)} className="text-game-muted hover:text-game-teal transition-colors">Contact</button>
+              <button onClick={() => scrollToLevel(4)} className="text-game-muted hover:text-game-teal transition-colors">Portfolio</button>
+              <button onClick={() => scrollToLevel(5)} className="text-game-muted hover:text-game-teal transition-colors">Contact</button>
             </div>
             
 
@@ -529,7 +595,54 @@ export default function Home() {
 
 
 
-        {/* Level 4: Final Portal (Contact) */}
+        {/* Level 4: Portfolio Quests */}
+        <section className="level-section bg-gradient-to-br from-game-darker to-purple-900/20 p-4 md:p-6 overflow-y-auto min-h-screen flex flex-col">
+          <div className="relative z-10 max-w-6xl mx-auto w-full flex-1">
+            <motion.h2 
+              className="text-3xl md:text-4xl font-bold text-center mb-6 md:mb-8 text-game-teal"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <i className="fas fa-scroll mr-2 md:mr-4"></i>Portfolio Quests
+            </motion.h2>
+            
+            {/* Methodology Page Link */}
+            <motion.div
+              className="text-center mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+            >
+              <a 
+                href="/methodology" 
+                className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-6 py-3 rounded-full font-bold text-white shadow-lg transition-all duration-300 transform hover:scale-105"
+              >
+                <i className="fas fa-rocket text-xl"></i>
+                <span>View PDLC</span>
+                <i className="fas fa-arrow-right"></i>
+              </a>
+              <p className="text-sm text-game-muted mt-2">
+                Comprehensive crypto product roadmaps, analytics, and technical capabilities
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pb-24 md:pb-6">
+              {portfolioProjects.map((project, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 * index, duration: 0.6 }}
+                >
+                  <PortfolioCard {...project} />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Level 5: Final Portal (Contact) */}
         <section className="level-section bg-gradient-to-br from-game-darker to-game-dark flex items-start md:items-center justify-center relative p-4 md:p-6 min-h-screen overflow-y-auto">
           <div className="relative z-10 max-w-4xl mx-auto text-center w-full pt-4 md:pt-0 pb-24 md:pb-6">
             <motion.div 
