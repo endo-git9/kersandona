@@ -288,7 +288,7 @@ export default function Home() {
               <span className="font-bold text-game-teal">Interactive Resume</span>
             </div>
             
-            <div className="hidden md:flex space-x-6">
+            <div className="hidden md:flex space-x-6 ml-20">
               <button onClick={() => scrollToLevel(0)} className="text-game-muted hover:text-game-teal transition-colors">Home</button>
               <button onClick={() => scrollToLevel(1)} className="text-game-muted hover:text-game-teal transition-colors">Career</button>
               <button onClick={() => scrollToLevel(2)} className="text-game-muted hover:text-game-teal transition-colors">Skills</button>
