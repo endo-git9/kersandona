@@ -70,7 +70,7 @@ export default function Home() {
         { value: "+20%", label: "Active Users", color: "bg-purple-500/20 border border-purple-500/50" },
         { value: "-40%", label: "Negative Feedback", color: "bg-green-500/20 border border-green-500/50" }
       ],
-      skills: ["Digital Identity", "E-signature", "Product Strategy", "Global Expansion"]
+      skills: ["Digital Signature", "E-signature", "Product Strategy", "Global Expansion"]
     },
     {
       company: "Tristan Arthamedia",
@@ -319,7 +319,7 @@ export default function Home() {
           
           <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
             <motion.div 
-              className="avatar-container mb-8 inline-block"
+              className="avatar-container mb-8 inline-block mt-4"
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
               transition={{ duration: 1, type: "spring" }}
@@ -328,9 +328,9 @@ export default function Home() {
                 <img 
                   src="https://media.cakeresume.com/image/upload/v1701816734/zwasyqdssjggl0kegz2y.jpg" 
                   alt="Endo Kersandona Avatar" 
-                  className="w-32 h-32 rounded-full border-4 border-game-teal shadow-lg shadow-game-teal/30 animate-float"
+                  className="w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-game-teal shadow-xl shadow-game-teal/40 animate-float object-cover"
                 />
-                <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-game-yellow to-game-teal px-3 py-1 rounded-full text-xs font-bold text-game-dark">
+                <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-game-yellow to-game-teal px-3 py-1 rounded-full text-xs font-bold text-game-dark shadow-lg">
                   HERO
                 </div>
               </div>
@@ -346,11 +346,11 @@ export default function Home() {
                 ENDO KERSANDONA
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold text-game-muted mb-4">
-                Product Management Legend
+                Product and Project Management
               </h2>
               <p className="text-lg text-game-muted max-w-3xl mx-auto mb-6">
-                Experienced Product & Project Leader with 9+ years across fintech, banking, cybersecurity, and digital identity. 
-                Proven track record of driving 30%+ revenue growth, 70% velocity improvements, and leading successful Agile transformations.
+                Experienced Product & Project Leader with 9+ years across fintech, banking, cybersecurity, and digital signature. 
+                Proven track record of driving revenue growth, velocity improvements, and leading successful Agile transformations.
               </p>
               
               <div className="grid grid-cols-3 gap-4 max-w-md mx-auto mb-8">
