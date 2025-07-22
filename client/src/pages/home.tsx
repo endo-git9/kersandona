@@ -24,151 +24,192 @@ export default function Home() {
 
   const experiences = [
     {
+      company: "Multiple Company",
+      position: "Product Development Lead",
+      period: "Mar 2025 - Present",
+      icon: "fas fa-rocket",
+      iconColor: "from-purple-500 to-pink-700",
+      achievements: [
+        { value: "RAG AI", label: "WhatsApp Integration", color: "bg-purple-500/20 border border-purple-500/50" },
+        { value: "MVP", label: "Payment Gateway", color: "bg-green-500/20 border border-green-500/50" },
+        { value: "POS", label: "Gold Trading System", color: "bg-yellow-500/20 border border-yellow-500/50" }
+      ],
+      skills: ["AI Solutions", "Payment Systems", "API Architecture", "MVP Development"]
+    },
+    {
       company: "Bank Mandiri",
-      position: "Project Manager",
-      period: "2024-2025",
+      position: "Scrum Master - Project Manager",
+      period: "Feb 2024 - Feb 2025",
       icon: "fas fa-university",
       iconColor: "from-blue-500 to-blue-700",
       achievements: [
-        { value: "+70%", label: "Velocity", color: "bg-green-500/20 border border-green-500/50" },
-        { value: "-95%", label: "Defects", color: "bg-red-500/20 border border-red-500/50" },
-        { value: "+30%", label: "Revenue", color: "bg-yellow-500/20 border border-yellow-500/50" }
+        { value: "+70%", label: "Team Velocity", color: "bg-green-500/20 border border-green-500/50" },
+        { value: "-95%", label: "Defect Reduction", color: "bg-red-500/20 border border-red-500/50" },
+        { value: "-30%", label: "Time to Market", color: "bg-yellow-500/20 border border-yellow-500/50" }
       ],
-      skills: ["Digital Banking", "Agile", "Team Leadership"]
+      skills: ["Scrum Master", "Agile Transformation", "CI/CD", "Team Coaching"]
     },
     {
       company: "Privy",
       position: "Head of Product",
-      period: "2022-2023",
+      period: "Aug 2022 - Sept 2023",
       icon: "fas fa-shield-alt",
       iconColor: "from-green-500 to-green-700",
       achievements: [
-        { value: "+150%", label: "User Growth", color: "bg-blue-500/20 border border-blue-500/50" },
-        { value: "+85%", label: "Feature Adoption", color: "bg-purple-500/20 border border-purple-500/50" },
-        { value: "12", label: "Product Launches", color: "bg-green-500/20 border border-green-500/50" }
+        { value: "+30%", label: "Revenue Increase", color: "bg-blue-500/20 border border-blue-500/50" },
+        { value: "+20%", label: "Active Users", color: "bg-purple-500/20 border border-purple-500/50" },
+        { value: "-40%", label: "Negative Feedback", color: "bg-green-500/20 border border-green-500/50" }
       ],
-      skills: ["Digital Identity", "Product Strategy", "Team Management"]
+      skills: ["Digital Identity", "E-signature", "Product Strategy", "Global Expansion"]
     },
     {
       company: "Tristan Arthamedia",
-      position: "Senior Product Manager",
-      period: "2021-2022",
-      icon: "fas fa-rocket",
+      position: "Senior Project Manager",
+      period: "Oct 2021 - Aug 2022",
+      icon: "fas fa-film",
       iconColor: "from-purple-500 to-purple-700",
       achievements: [
-        { value: "+200%", label: "Platform Scale", color: "bg-teal-500/20 border border-teal-500/50" },
-        { value: "+60%", label: "Engagement", color: "bg-orange-500/20 border border-orange-500/50" },
-        { value: "8", label: "Major Features", color: "bg-pink-500/20 border border-pink-500/50" }
+        { value: "ERP", label: "Software Solutions", color: "bg-teal-500/20 border border-teal-500/50" },
+        { value: "IoT", label: "Innovation Projects", color: "bg-orange-500/20 border border-orange-500/50" },
+        { value: "HRMS", label: "System Integration", color: "bg-pink-500/20 border border-pink-500/50" }
       ],
-      skills: ["Media Platform", "User Experience", "Analytics"]
+      skills: ["Project Management", "ERP Systems", "IoT Solutions", "HRMS"]
     },
     {
-      company: "Securemetric",
+      company: "Securemetric Technology",
       position: "Assistant Manager",
-      period: "2020-2021",
+      period: "Oct 2020 - Oct 2021",
       icon: "fas fa-lock",
       iconColor: "from-red-500 to-red-700",
       achievements: [
-        { value: "+120%", label: "Security Score", color: "bg-red-500/20 border border-red-500/50" },
-        { value: "-80%", label: "Incidents", color: "bg-yellow-500/20 border border-yellow-500/50" },
-        { value: "15", label: "Certifications", color: "bg-green-500/20 border border-green-500/50" }
+        { value: "PKI", label: "Security Infrastructure", color: "bg-red-500/20 border border-red-500/50" },
+        { value: "eID", label: "Digital Identity", color: "bg-yellow-500/20 border border-yellow-500/50" },
+        { value: "HSM", label: "Payment Security", color: "bg-green-500/20 border border-green-500/50" }
       ],
-      skills: ["Cybersecurity", "ISO 27001", "Risk Management"]
+      skills: ["Cybersecurity", "Digital Signatures", "Mobile Security", "Enterprise Solutions"]
     },
     {
       company: "Trinet",
-      position: "Software Consultant",
-      period: "2018-2020",
+      position: "PM & Software Consultant",
+      period: "Dec 2018 - Oct 2020",
       icon: "fas fa-code",
       iconColor: "from-indigo-500 to-indigo-700",
       achievements: [
-        { value: "+90%", label: "Code Quality", color: "bg-indigo-500/20 border border-indigo-500/50" },
-        { value: "25+", label: "Projects", color: "bg-green-500/20 border border-green-500/50" },
-        { value: "+50%", label: "Efficiency", color: "bg-blue-500/20 border border-blue-500/50" }
+        { value: "ITSM", label: "Service Management", color: "bg-indigo-500/20 border border-indigo-500/50" },
+        { value: "API", label: "Management Tools", color: "bg-green-500/20 border border-green-500/50" },
+        { value: "LMS", label: "Learning Systems", color: "bg-blue-500/20 border border-blue-500/50" }
       ],
-      skills: ["Software Development", "Consulting", "Technical Leadership"]
+      skills: ["Software Consulting", "IT Asset Management", "Performance Monitoring", "Analytics"]
     },
     {
       company: "Mitra Infosarana",
       position: "Product Specialist",
-      period: "2016-2018",
+      period: "Apr 2016 - Dec 2018",
       icon: "fas fa-chart-line",
       iconColor: "from-teal-500 to-teal-700",
       achievements: [
-        { value: "+75%", label: "Client Satisfaction", color: "bg-teal-500/20 border border-teal-500/50" },
-        { value: "+40%", label: "Product Adoption", color: "bg-purple-500/20 border border-purple-500/50" },
-        { value: "10+", label: "Solutions Deployed", color: "bg-yellow-500/20 border border-yellow-500/50" }
+        { value: "DWH", label: "Data Warehousing", color: "bg-teal-500/20 border border-teal-500/50" },
+        { value: "BI", label: "Business Intelligence", color: "bg-purple-500/20 border border-purple-500/50" },
+        { value: "Big Data", label: "Analytics Solutions", color: "bg-yellow-500/20 border border-yellow-500/50" }
       ],
-      skills: ["Product Analysis", "Client Relations", "Business Intelligence"]
+      skills: ["Data Warehousing", "Business Intelligence", "Big Data", "Reporting Systems"]
     }
   ];
 
   const skills = [
-    { name: "Agile Methodology", level: 95, description: "Expert level - 7+ years experience", color: "from-game-teal to-blue-500", icon: "fas fa-cogs" },
-    { name: "Analytics & Data", level: 90, description: "Advanced analytics and business intelligence", color: "from-game-purple to-pink-500", icon: "fas fa-chart-bar" },
-    { name: "SDLC Management", level: 85, description: "Complete software development lifecycle", color: "from-game-yellow to-orange-500", icon: "fas fa-code-branch" },
-    { name: "UI/UX Design", level: 80, description: "User-centered design principles", color: "from-green-500 to-teal-500", icon: "fas fa-paint-brush" }
+    { name: "Product Lifecycle Management", level: 95, description: "Expert - 9+ years managing complete product cycles", color: "from-game-teal to-blue-500", icon: "fas fa-cogs" },
+    { name: "Agile Methodologies", level: 93, description: "Scrum Master with proven 70% velocity improvements", color: "from-game-purple to-pink-500", icon: "fas fa-users" },
+    { name: "Data-Driven Decision Making", level: 90, description: "Advanced analytics driving 30%+ revenue growth", color: "from-game-yellow to-orange-500", icon: "fas fa-chart-bar" },
+    { name: "Stakeholder Management", level: 88, description: "Leading cross-functional teams and resolving conflicts", color: "from-green-500 to-teal-500", icon: "fas fa-handshake" },
+    { name: "Risk Management", level: 85, description: "Enterprise security and compliance expertise", color: "from-red-500 to-pink-500", icon: "fas fa-shield-alt" },
+    { name: "Growth & Monetization", level: 87, description: "Proven track record of scaling revenue and users", color: "from-purple-500 to-blue-500", icon: "fas fa-chart-line" },
+    { name: "Technical Documentation", level: 82, description: "Clear documentation and process optimization", color: "from-indigo-500 to-purple-500", icon: "fas fa-file-alt" },
+    { name: "Software Testing Lifecycle", level: 85, description: "Quality assurance and defect reduction", color: "from-teal-500 to-green-500", icon: "fas fa-bug" }
   ];
 
   const tools = [
     { name: "Jira", icon: "fab fa-jira", color: "bg-blue-500/20 border border-blue-500/50" },
     { name: "Figma", icon: "fab fa-figma", color: "bg-purple-500/20 border border-purple-500/50" },
     { name: "Trello", icon: "fas fa-tasks", color: "bg-teal-500/20 border border-teal-500/50" },
-    { name: "Whimsical", icon: "fas fa-sitemap", color: "bg-pink-500/20 border border-pink-500/50" },
-    { name: "Notion", icon: "fas fa-sticky-note", color: "bg-gray-500/20 border border-gray-500/50" },
+    { name: "ClickUp", icon: "fas fa-mouse-pointer", color: "bg-pink-500/20 border border-pink-500/50" },
+    { name: "Aha!", icon: "fas fa-lightbulb", color: "bg-yellow-500/20 border border-yellow-500/50" },
+    { name: "Asana", icon: "fas fa-project-diagram", color: "bg-red-500/20 border border-red-500/50" },
     { name: "Confluence", icon: "fas fa-users", color: "bg-blue-600/20 border border-blue-600/50" },
+    { name: "Notion", icon: "fas fa-sticky-note", color: "bg-gray-500/20 border border-gray-500/50" },
+    { name: "Slack", icon: "fab fa-slack", color: "bg-green-500/20 border border-green-500/50" },
+    { name: "Microsoft 365", icon: "fab fa-microsoft", color: "bg-blue-600/20 border border-blue-600/50" },
     { name: "GitLab", icon: "fab fa-gitlab", color: "bg-orange-500/20 border border-orange-500/50" },
-    { name: "Odoo", icon: "fas fa-database", color: "bg-green-600/20 border border-green-600/50" },
-    { name: "Datadog", icon: "fas fa-chart-bar", color: "bg-purple-600/20 border border-purple-600/50" },
-    { name: "Postman", icon: "fas fa-paper-plane", color: "bg-orange-600/20 border border-orange-600/50" },
-    { name: "Kafka", icon: "fas fa-stream", color: "bg-red-500/20 border border-red-500/50" },
-    { name: "More...", icon: "fas fa-plus", color: "bg-yellow-500/20 border border-yellow-500/50" }
+    { name: "Git", icon: "fab fa-git-alt", color: "bg-red-600/20 border border-red-600/50" },
+    { name: "Whimsical", icon: "fas fa-sitemap", color: "bg-teal-600/20 border border-teal-600/50" },
+    { name: "Adobe XD", icon: "fab fa-adobe", color: "bg-purple-600/20 border border-purple-600/50" },
+    { name: "Google Analytics", icon: "fab fa-google", color: "bg-orange-600/20 border border-orange-600/50" },
+    { name: "Tableau", icon: "fas fa-chart-area", color: "bg-blue-700/20 border border-blue-700/50" },
+    { name: "Postman", icon: "fas fa-paper-plane", color: "bg-orange-500/20 border border-orange-500/50" },
+    { name: "Datadog", icon: "fas fa-chart-bar", color: "bg-purple-700/20 border border-purple-700/50" },
+    { name: "Kafka", icon: "fas fa-stream", color: "bg-red-700/20 border border-red-700/50" },
+    { name: "Odoo ERP", icon: "fas fa-database", color: "bg-green-600/20 border border-green-600/50" }
   ];
 
   const portfolioProjects = [
     {
-      title: "Digital Banking Platform",
-      description: "Revolutionary mobile banking experience with AI-powered insights and seamless UX.",
-      icon: "fas fa-mobile-alt",
-      iconColor: "from-blue-500 to-purple-600",
+      title: "Digital Payment Gateway MVP",
+      description: "End-to-end secure payment gateway with API architecture and merchant onboarding, improving transaction efficiency.",
+      icon: "fas fa-credit-card",
+      iconColor: "from-green-500 to-emerald-600",
       rarity: "Epic Quest",
       rating: 5
     },
     {
-      title: "Digital Identity Suite",
-      description: "Secure identity verification platform serving millions of users across Southeast Asia.",
-      icon: "fas fa-id-card",
-      iconColor: "from-green-500 to-teal-600",
-      rarity: "Epic Quest",
-      rating: 5
-    },
-    {
-      title: "Media Platform Evolution",
-      description: "Transformed legacy media platform into modern streaming service with 200% user growth.",
-      icon: "fas fa-video",
-      iconColor: "from-purple-500 to-pink-600",
-      rarity: "Epic Quest",
-      rating: 4
-    },
-    {
-      title: "Cybersecurity Framework",
-      description: "Enterprise security solution reducing incidents by 80% while improving compliance scores.",
-      icon: "fas fa-shield-virus",
-      iconColor: "from-red-500 to-orange-600",
-      rarity: "Rare Quest",
-      rating: 4
-    },
-    {
-      title: "Software Consulting Suite",
-      description: "Custom software solutions for 25+ enterprise clients improving operational efficiency by 50%.",
-      icon: "fas fa-code-branch",
-      iconColor: "from-indigo-500 to-blue-600",
+      title: "RAG AI WhatsApp Integration",
+      description: "Retrieval Augmented Generation AI solution automating customer interactions with improved response accuracy.",
+      icon: "fas fa-robot",
+      iconColor: "from-purple-500 to-violet-600",
       rarity: "Legendary",
       rating: 5
     },
     {
-      title: "Business Intelligence Platform",
-      description: "Analytics platform providing actionable insights to drive 75% improvement in client satisfaction.",
+      title: "Gold Trading POS System",
+      description: "Custom Point of Sale system for high-value gold trading with real-time inventory tracking and regulatory compliance.",
+      icon: "fas fa-coins",
+      iconColor: "from-yellow-500 to-amber-600",
+      rarity: "Epic Quest",
+      rating: 5
+    },
+    {
+      title: "Privy Digital Identity Platform",
+      description: "Led product strategy driving 30% revenue increase and 20% user growth with e-signature and e-stamp features.",
+      icon: "fas fa-id-card",
+      iconColor: "from-blue-500 to-cyan-600",
+      rarity: "Epic Quest",
+      rating: 5
+    },
+    {
+      title: "Banking Agile Transformation",
+      description: "Successfully transformed Bank Mandiri teams from Waterfall to Scrum, achieving 70% velocity boost and 95% defect reduction.",
+      icon: "fas fa-university",
+      iconColor: "from-blue-600 to-indigo-600",
+      rarity: "Legendary",
+      rating: 5
+    },
+    {
+      title: "Cybersecurity Solutions Suite",
+      description: "Enterprise security framework with PKI, digital signatures, mobile security, and payment HSM for multiple sectors.",
+      icon: "fas fa-shield-virus",
+      iconColor: "from-red-500 to-rose-600",
+      rarity: "Epic Quest",
+      rating: 4
+    },
+    {
+      title: "Multi-Industry Software Consulting",
+      description: "ITSM, ITAM, API management, LMS, and performance monitoring solutions across diverse enterprise clients.",
+      icon: "fas fa-code-branch",
+      iconColor: "from-indigo-500 to-purple-600",
+      rarity: "Rare Quest",
+      rating: 4
+    },
+    {
+      title: "Big Data & BI Analytics Platform",
+      description: "Data warehousing, business intelligence, and big data solutions providing actionable insights for enterprise clients.",
       icon: "fas fa-chart-pie",
       iconColor: "from-teal-500 to-green-600",
       rarity: "Rare Quest",
@@ -177,18 +218,53 @@ export default function Home() {
   ];
 
   const certifications = [
-    { name: "Analysis and Analytics", icon: "fas fa-chart-line" },
-    { name: "Design Thinking", icon: "fas fa-lightbulb" },
-    { name: "Executive Leadership", icon: "fas fa-crown" },
-    { name: "ISO 27001:2022", icon: "fas fa-shield-alt" },
-    { name: "Cybersecurity: The Annex A Controls", icon: "fas fa-lock" },
-    { name: "Managing Jira Project", icon: "fas fa-tasks" },
-    { name: "Managing Platform Product", icon: "fas fa-cogs" },
-    { name: "Data-Driven Learning Design", icon: "fas fa-graduation-cap" },
-    { name: "Cert Prep: Scrum Master", icon: "fas fa-users" },
-    { name: "IT Security Foundation", icon: "fas fa-security" },
-    { name: "Technical Product Managers", icon: "fas fa-product-hunt" },
-    { name: "AI and Business Strategy", icon: "fas fa-robot" }
+    { name: "Data Visualization for Data Analysis and Analytics (IIBA)", icon: "fas fa-chart-line" },
+    { name: "Design Thinking (PMI)", icon: "fas fa-lightbulb" },
+    { name: "Executive Leadership (PMI)", icon: "fas fa-crown" },
+    { name: "ISO 27001:2022-Compliant Cybersecurity: The Annex A Controls (PMI)", icon: "fas fa-shield-alt" },
+    { name: "Managing Jira Project (PMI)", icon: "fas fa-tasks" },
+    { name: "Managing Platform Product (PMI)", icon: "fas fa-cogs" },
+    { name: "Data-Driven Learning Design (NASBA)", icon: "fas fa-graduation-cap" },
+    { name: "Cert Prep: Scrum Master (PMI)", icon: "fas fa-users" },
+    { name: "IT Security Foundation (IIBA)", icon: "fas fa-lock" },
+    { name: "Technical Product Managers (PMI)", icon: "fas fa-product-hunt" },
+    { name: "Artificial Intelligence and Business Strategy (PMI)", icon: "fas fa-robot" }
+  ];
+
+  const education = [
+    {
+      degree: "Master of Informatics",
+      institution: "Pelita Harapan University (UPH)",
+      period: "2025 - Present",
+      status: "In Progress",
+      focus: ["Artificial Intelligence", "Medical Informatics", "Cloud Computing", "Blockchain Technology", "Data Science"],
+      icon: "fas fa-graduation-cap",
+      color: "from-purple-500 to-pink-600"
+    },
+    {
+      degree: "Bachelor of Informatics Engineering",
+      institution: "University of Bengkulu (UNIB)",
+      period: "2010 - 2015",
+      status: "Graduated",
+      focus: ["Natural Language Processing", "Search Algorithms", "Al-Quran Verse Search Engine using Jaro-Winkler Algorithm"],
+      icon: "fas fa-university",
+      color: "from-blue-500 to-teal-600"
+    }
+  ];
+
+  const industries = [
+    { name: "Banking & Financial Services", icon: "fas fa-university", color: "bg-blue-500/20 border border-blue-500/50" },
+    { name: "Fintech", icon: "fas fa-credit-card", color: "bg-green-500/20 border border-green-500/50" },
+    { name: "E-Commerce", icon: "fas fa-shopping-cart", color: "bg-purple-500/20 border border-purple-500/50" },
+    { name: "General Insurance", icon: "fas fa-shield-alt", color: "bg-red-500/20 border border-red-500/50" },
+    { name: "Healthcare", icon: "fas fa-heartbeat", color: "bg-pink-500/20 border border-pink-500/50" },
+    { name: "Edutech", icon: "fas fa-graduation-cap", color: "bg-indigo-500/20 border border-indigo-500/50" },
+    { name: "Government", icon: "fas fa-landmark", color: "bg-gray-500/20 border border-gray-500/50" },
+    { name: "Manufacturing", icon: "fas fa-industry", color: "bg-orange-500/20 border border-orange-500/50" },
+    { name: "Cybersecurity", icon: "fas fa-lock", color: "bg-red-600/20 border border-red-600/50" },
+    { name: "Transport & Logistics", icon: "fas fa-truck", color: "bg-yellow-500/20 border border-yellow-500/50" },
+    { name: "Media & Entertainment", icon: "fas fa-video", color: "bg-purple-600/20 border border-purple-600/50" },
+    { name: "Oil & Gas", icon: "fas fa-gas-pump", color: "bg-teal-500/20 border border-teal-500/50" }
   ];
 
   return (
@@ -259,31 +335,35 @@ export default function Home() {
               <h1 className="text-5xl md:text-7xl font-black mb-4 gradient-text-rainbow">
                 ENDO KERSANDONA
               </h1>
-              <h2 className="text-2xl md:text-3xl font-semibold text-game-muted mb-6">
+              <h2 className="text-2xl md:text-3xl font-semibold text-game-muted mb-4">
                 Product Management Legend
               </h2>
+              <p className="text-lg text-game-muted max-w-3xl mx-auto mb-6">
+                Experienced Product & Project Leader with 9+ years across fintech, banking, cybersecurity, and digital identity. 
+                Proven track record of driving 30%+ revenue growth, 70% velocity improvements, and leading successful Agile transformations.
+              </p>
               
               <div className="grid grid-cols-3 gap-4 max-w-md mx-auto mb-8">
                 <motion.div 
                   className="rpg-dialog rounded-lg p-3 text-center"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="text-game-yellow text-xl font-bold">7+</div>
+                  <div className="text-game-yellow text-xl font-bold">9+</div>
                   <div className="text-xs text-game-muted">Years XP</div>
                 </motion.div>
                 <motion.div 
                   className="rpg-dialog rounded-lg p-3 text-center"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="text-game-teal text-xl font-bold">6</div>
+                  <div className="text-game-teal text-xl font-bold">7</div>
                   <div className="text-xs text-game-muted">Companies</div>
                 </motion.div>
                 <motion.div 
                   className="rpg-dialog rounded-lg p-3 text-center"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="text-game-purple text-xl font-bold">∞</div>
-                  <div className="text-xs text-game-muted">Impact</div>
+                  <div className="text-game-purple text-xl font-bold">11</div>
+                  <div className="text-xs text-game-muted">Certifications</div>
                 </motion.div>
               </div>
             </motion.div>
@@ -423,44 +503,41 @@ export default function Home() {
                 </h3>
                 
                 <div className="space-y-6">
-                  <motion.div 
-                    className="border border-game-teal/50 rounded-lg p-4 bg-game-teal/10"
-                    whileHover={{ scale: 1.02 }}
-                  >
-                    <div className="flex items-center mb-3">
-                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
-                        <i className="fas fa-robot text-white"></i>
+                  {education.map((edu, index) => (
+                    <motion.div 
+                      key={index}
+                      className={`border border-game-teal/50 rounded-lg p-4 bg-game-teal/10 ${edu.status === 'In Progress' ? 'ring-2 ring-game-yellow/50' : ''}`}
+                      whileHover={{ scale: 1.02 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.2, duration: 0.4 }}
+                    >
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="flex items-center">
+                          <div className={`w-12 h-12 bg-gradient-to-br ${edu.color} rounded-lg flex items-center justify-center mr-4`}>
+                            <i className={`${edu.icon} text-white`}></i>
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-game-text">{edu.degree}</h4>
+                            <p className="text-game-muted text-sm">{edu.institution}</p>
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <div className="text-game-yellow text-sm font-semibold">{edu.period}</div>
+                          <div className={`text-xs px-2 py-1 rounded-full ${edu.status === 'In Progress' ? 'bg-yellow-500/20 text-yellow-400' : 'bg-green-500/20 text-green-400'}`}>
+                            {edu.status}
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-bold text-game-text">S2 Informatika</h4>
-                        <p className="text-game-muted text-sm">Universitas Pelita Harapan (UPH)</p>
+                      <div className="flex flex-wrap gap-2">
+                        {edu.focus.map((focus, focusIndex) => (
+                          <span key={focusIndex} className="bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-xs">
+                            {focus}
+                          </span>
+                        ))}
                       </div>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-xs">AI</span>
-                      <span className="bg-purple-500/20 text-purple-400 px-2 py-1 rounded text-xs">Cloud Computing</span>
-                      <span className="bg-teal-500/20 text-teal-400 px-2 py-1 rounded text-xs">Blockchain</span>
-                    </div>
-                  </motion.div>
-                  
-                  <motion.div 
-                    className="border border-game-purple/50 rounded-lg p-4 bg-game-purple/10"
-                    whileHover={{ scale: 1.02 }}
-                  >
-                    <div className="flex items-center mb-3">
-                      <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex items-center justify-center mr-4">
-                        <i className="fas fa-laptop-code text-white"></i>
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-game-text">S1 Informatika</h4>
-                        <p className="text-game-muted text-sm">Universitas Bengkulu (UNIB)</p>
-                      </div>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="bg-green-500/20 text-green-400 px-2 py-1 rounded text-xs">Software Engineering</span>
-                      <span className="bg-teal-500/20 text-teal-400 px-2 py-1 rounded text-xs">Database Systems</span>
-                    </div>
-                  </motion.div>
+                    </motion.div>
+                  ))}
                 </div>
               </motion.div>
               
@@ -474,20 +551,40 @@ export default function Home() {
                   <i className="fas fa-award mr-2"></i>Certification Arsenal
                 </h3>
                 
-                <div className="space-y-3 max-h-80 overflow-y-auto pr-2">
-                  {certifications.map((cert, index) => (
-                    <motion.div
-                      key={index}
-                      className="flex items-center p-3 bg-yellow-500/10 border border-yellow-500/30 rounded-lg hover:bg-yellow-500/20 transition-colors cursor-pointer"
-                      whileHover={{ x: 5 }}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.1 * index, duration: 0.4 }}
-                    >
-                      <i className={`${cert.icon} text-yellow-400 mr-3`}></i>
-                      <span className="text-sm">{cert.name}</span>
-                    </motion.div>
-                  ))}
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-game-purple mb-3">Professional Certifications</h4>
+                  <div className="space-y-3 max-h-60 overflow-y-auto pr-2">
+                    {certifications.map((cert, index) => (
+                      <motion.div
+                        key={index}
+                        className="flex items-center p-3 bg-yellow-500/10 border border-yellow-500/30 rounded-lg hover:bg-yellow-500/20 transition-colors cursor-pointer"
+                        whileHover={{ x: 5 }}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.1 * index, duration: 0.4 }}
+                      >
+                        <i className={`${cert.icon} text-yellow-400 mr-3`}></i>
+                        <span className="text-sm">{cert.name}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                  
+                  <h4 className="text-lg font-semibold text-game-teal mb-3 mt-6">Industry Experience</h4>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    {industries.map((industry, index) => (
+                      <motion.div
+                        key={index}
+                        className={`skill-node ${industry.color} p-3 rounded-lg text-center hover:bg-opacity-50 cursor-pointer`}
+                        whileHover={{ scale: 1.05 }}
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.1 * index, duration: 0.3 }}
+                      >
+                        <i className={`${industry.icon} text-lg mb-2 block`}></i>
+                        <span className="text-xs">{industry.name}</span>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             </div>
@@ -547,14 +644,35 @@ export default function Home() {
               RECRUIT THIS HERO
             </motion.h2>
             
-            <motion.p 
-              className="text-xl text-game-muted mb-12 max-w-2xl mx-auto"
+            <motion.div 
+              className="mb-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.6 }}
             >
-              Ready to embark on your next product adventure? Let's connect and build something extraordinary together.
-            </motion.p>
+              <p className="text-xl text-game-muted mb-6 max-w-2xl mx-auto">
+                Ready to embark on your next product adventure? Let's connect and build something extraordinary together.
+              </p>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto text-center mb-8">
+                <div className="bg-game-darker/50 rounded-lg p-3 border border-game-teal/30">
+                  <i className="fas fa-map-marker-alt text-game-teal mb-2"></i>
+                  <div className="text-sm text-game-text">Jakarta, Indonesia</div>
+                </div>
+                <div className="bg-game-darker/50 rounded-lg p-3 border border-game-purple/30">
+                  <i className="fas fa-phone text-game-purple mb-2"></i>
+                  <div className="text-sm text-game-text">+62-857-1831-6442</div>
+                </div>
+                <div className="bg-game-darker/50 rounded-lg p-3 border border-game-yellow/30">
+                  <i className="fas fa-briefcase text-game-yellow mb-2"></i>
+                  <div className="text-sm text-game-text">Product Leader</div>
+                </div>
+                <div className="bg-game-darker/50 rounded-lg p-3 border border-green-500/30">
+                  <i className="fas fa-globe text-green-400 mb-2"></i>
+                  <div className="text-sm text-game-text">Remote Available</div>
+                </div>
+              </div>
+            </motion.div>
             
             <motion.div 
               className="flex flex-col md:flex-row gap-6 justify-center items-center mb-12"
@@ -630,19 +748,19 @@ export default function Home() {
               transition={{ delay: 1.6, duration: 0.6 }}
             >
               <div className="text-center">
-                <div className="text-2xl font-bold text-game-teal">7+</div>
+                <div className="text-2xl font-bold text-game-teal">9+</div>
                 <div className="text-xs text-game-muted">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-game-yellow">6</div>
+                <div className="text-2xl font-bold text-game-yellow">7</div>
                 <div className="text-xs text-game-muted">Companies</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-game-purple">25+</div>
+                <div className="text-2xl font-bold text-game-purple">50+</div>
                 <div className="text-xs text-game-muted">Projects Delivered</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-pink-400">12+</div>
+                <div className="text-2xl font-bold text-pink-400">11</div>
                 <div className="text-xs text-game-muted">Certifications</div>
               </div>
             </motion.div>

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a gamified interactive resume website built as a side-scrolling RPG-style experience. The project combines modern web technologies with game-like elements to create an engaging digital portfolio that tells Endo Kersandona's career story through interactive levels and achievements.
+This is a gamified interactive resume website built as a side-scrolling RPG-style experience featuring real career data and achievements from Endo Kersandona's 9+ year career in product and project management. The website showcases authentic experience across 7 companies, 11 professional certifications, and 12+ industry sectors including fintech, banking, cybersecurity, and digital identity. The project combines modern web technologies with game-like elements to create an engaging digital portfolio that presents measurable career achievements through interactive RPG-style levels.
 
 ## User Preferences
 
