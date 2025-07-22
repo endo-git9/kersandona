@@ -605,10 +605,10 @@ export default function Home() {
         </section>
 
         {/* Level 4: Portfolio Quests */}
-        <section className="level-section bg-gradient-to-br from-game-darker to-purple-900/20 p-4 md:p-6 overflow-y-auto">
-          <div className="relative z-10 max-w-6xl mx-auto">
+        <section className="level-section bg-gradient-to-br from-game-darker to-purple-900/20 p-4 md:p-6 overflow-y-auto min-h-screen flex flex-col">
+          <div className="relative z-10 max-w-6xl mx-auto w-full flex-1">
             <motion.h2 
-              className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-game-teal"
+              className="text-3xl md:text-4xl font-bold text-center mb-6 md:mb-8 text-game-teal"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -616,7 +616,7 @@ export default function Home() {
               <i className="fas fa-scroll mr-2 md:mr-4"></i>Portfolio Quests
             </motion.h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pb-24 md:pb-6">
               {portfolioProjects.map((project, index) => (
                 <motion.div
                   key={index}
@@ -632,8 +632,8 @@ export default function Home() {
         </section>
 
         {/* Level 5: Final Portal (Contact) */}
-        <section className="level-section bg-gradient-to-br from-game-darker to-game-dark flex items-center justify-center relative p-6">
-          <div className="relative z-10 max-w-4xl mx-auto text-center w-full">
+        <section className="level-section bg-gradient-to-br from-game-darker to-game-dark flex items-start md:items-center justify-center relative p-4 md:p-6 min-h-screen overflow-y-auto">
+          <div className="relative z-10 max-w-4xl mx-auto text-center w-full pt-4 md:pt-0">
             <motion.div 
               className="mb-12"
               initial={{ scale: 0 }}
@@ -649,12 +649,12 @@ export default function Home() {
             </motion.div>
             
             <motion.h2 
-              className="text-5xl md:text-6xl font-black mb-6 gradient-text-rainbow"
+              className="text-3xl md:text-5xl font-black mb-6 gradient-text-rainbow"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
-              RECRUIT THIS HERO
+              Let's Connect
             </motion.h2>
             
             <motion.div 
