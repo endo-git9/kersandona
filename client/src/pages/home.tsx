@@ -319,7 +319,7 @@ export default function Home() {
           
           <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-8">
             <motion.div 
-              className="avatar-container mb-8 inline-block mt-5"
+              className="avatar-container mb-8 inline-block mt-16"
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
               transition={{ duration: 1, type: "spring" }}
