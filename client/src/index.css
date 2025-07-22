@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+  
+  /* Game-specific colors */
+  --game-dark: hsl(240, 48%, 9%);
+  --game-darker: hsl(240, 34%, 12%);
+  --game-teal: hsl(180, 100%, 35%);
+  --game-yellow: hsl(45, 93%, 57%);
+  --game-purple: hsl(263, 70%, 60%);
+  --game-text: hsl(210, 40%, 93%);
+  --game-muted: hsl(210, 15%, 58%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background: linear-gradient(135deg, var(--game-dark) 0%, var(--game-darker) 100%);
+    color: var(--game-text);
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .rpg-dialog {
+    background: linear-gradient(145deg, var(--game-darker) 0%, hsl(240, 15%, 16%) 100%);
+    border: 2px solid var(--game-teal);
+    box-shadow: 0 0 20px hsla(180, 100%, 35%, 0.3);
+  }
+
+  .skill-node {
+    transition: all 0.3s ease;
+  }
+
+  .skill-node:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px hsla(263, 70%, 60%, 0.5);
+  }
+
+  .achievement-badge {
+    background: linear-gradient(45deg, var(--game-yellow), hsl(43, 89%, 51%));
+    animation: pulse-glow 2s infinite;
+  }
+
+  .horizontal-scroll {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .horizontal-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .level-section {
+    scroll-snap-align: start;
+    min-width: 100vw;
+  }
+
+  .avatar-container {
+    transition: all 0.3s ease;
+  }
+
+  .avatar-container:hover {
+    transform: scale(1.05);
+  }
+
+  .tooltip {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: 50;
+  }
+
+  .tooltip-trigger:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .horizontal-scroll {
+      overflow-x: visible;
+      scroll-snap-type: none;
+      flex-direction: column;
+    }
+    
+    .level-section {
+      min-width: 100%;
+      scroll-snap-align: none;
+      min-height: 100vh;
+    }
+  }
+}
+
+@layer utilities {
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .text-game-dark {
+    color: var(--game-dark);
+  }
+
+  .text-game-darker {
+    color: var(--game-darker);
+  }
+
+  .text-game-teal {
+    color: var(--game-teal);
+  }
+
+  .text-game-yellow {
+    color: var(--game-yellow);
+  }
+
+  .text-game-purple {
+    color: var(--game-purple);
+  }
+
+  .text-game-text {
+    color: var(--game-text);
+  }
+
+  .text-game-muted {
+    color: var(--game-muted);
+  }
+
+  .bg-game-dark {
+    background-color: var(--game-dark);
+  }
+
+  .bg-game-darker {
+    background-color: var(--game-darker);
+  }
+
+  .bg-game-teal {
+    background-color: var(--game-teal);
+  }
+
+  .bg-game-yellow {
+    background-color: var(--game-yellow);
+  }
+
+  .bg-game-purple {
+    background-color: var(--game-purple);
+  }
+
+  .border-game-teal {
+    border-color: var(--game-teal);
+  }
+
+  .border-game-yellow {
+    border-color: var(--game-yellow);
+  }
+
+  .border-game-purple {
+    border-color: var(--game-purple);
+  }
+
+  .gradient-text-rainbow {
+    background: linear-gradient(45deg, var(--game-teal), var(--game-yellow), var(--game-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-10px); 
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 5px var(--game-yellow);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 20px var(--game-yellow), 0 0 30px var(--game-yellow);
+  }
+}

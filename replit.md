@@ -1,0 +1,111 @@
+# Interactive Resume Website - Endo Kersandona
+
+## Overview
+
+This is a gamified interactive resume website built as a side-scrolling RPG-style experience. The project combines modern web technologies with game-like elements to create an engaging digital portfolio that tells Endo Kersandona's career story through interactive levels and achievements.
+
+## User Preferences
+
+Preferred communication style: Simple, everyday language.
+
+## System Architecture
+
+### Frontend Architecture
+- **Framework**: React 18 with TypeScript
+- **Styling**: Tailwind CSS with custom game-themed color variables
+- **UI Components**: Radix UI primitives with shadcn/ui components
+- **Animations**: Framer Motion for smooth transitions and game-like interactions
+- **Routing**: Wouter for lightweight client-side routing
+- **State Management**: TanStack Query for server state management
+- **Build Tool**: Vite for fast development and optimized builds
+
+### Backend Architecture
+- **Runtime**: Node.js with Express.js
+- **Language**: TypeScript with ES modules
+- **Database**: PostgreSQL with Drizzle ORM
+- **Database Provider**: Neon Database (serverless PostgreSQL)
+- **Session Management**: PostgreSQL-based sessions using connect-pg-simple
+
+### Key Components
+
+#### Game Interface Components
+- **ExperienceCard**: Displays work experience as RPG-style character cards with achievements and skill badges
+- **SkillNode**: Interactive skill trees with progress bars and tooltips
+- **PortfolioCard**: Project showcases designed as collectible game items with rarity levels
+- **ContactForm**: Integrated contact system with EmailJS for direct communication
+
+#### Core Features
+- **Side-scrolling Navigation**: Horizontal game world navigation on desktop, vertical on mobile
+- **Achievement System**: Career milestones displayed as game achievements with metrics
+- **Responsive Design**: Adaptive layout that transforms from side-scrolling to vertical on mobile devices
+- **Interactive Elements**: Hover effects, animations, and game-like feedback
+
+### Data Flow
+
+1. **Static Content**: Career data, skills, and achievements are currently hardcoded in React components
+2. **Contact Form**: Uses EmailJS API for form submissions without backend processing
+3. **Navigation**: Custom hook manages scroll-based navigation between experience levels
+4. **Responsive Handling**: useIsMobile hook determines layout and navigation behavior
+
+### External Dependencies
+
+#### UI and Styling
+- **Radix UI**: Comprehensive set of accessible UI primitives
+- **Tailwind CSS**: Utility-first CSS framework with custom game theme
+- **FontAwesome**: Icon library for consistent visual elements
+- **Framer Motion**: Animation library for smooth transitions
+
+#### Development Tools
+- **TypeScript**: Type safety across frontend and backend
+- **ESBuild**: Fast bundling for production builds
+- **PostCSS**: CSS processing with Tailwind
+
+#### Database and Backend
+- **Drizzle ORM**: Type-safe database operations
+- **Neon Database**: Serverless PostgreSQL hosting
+- **Zod**: Schema validation for database operations
+
+### Deployment Strategy
+
+The application is structured for deployment on platforms like Replit:
+
+1. **Development**: 
+   - Frontend served by Vite dev server
+   - Backend runs on Express with TypeScript compilation via tsx
+   - Hot module replacement for rapid development
+
+2. **Production Build**:
+   - Frontend builds to static files via Vite
+   - Backend compiles to single bundle via ESBuild
+   - Database migrations handled via Drizzle Kit
+
+3. **Environment Configuration**:
+   - Database URL required for PostgreSQL connection
+   - EmailJS credentials for contact form functionality
+   - Replit-specific plugins for development environment integration
+
+### Architecture Decisions
+
+#### Gamification Approach
+- **Problem**: Traditional resumes lack engagement and memorability
+- **Solution**: RPG-style interface with achievements, levels, and interactive elements
+- **Benefits**: Memorable user experience, showcases creativity and technical skills
+- **Trade-offs**: May not appeal to all professional audiences
+
+#### Technology Stack
+- **Problem**: Need for modern, performant web application with rich interactions
+- **Solution**: React + TypeScript + Tailwind CSS + Framer Motion
+- **Benefits**: Type safety, component reusability, smooth animations, responsive design
+- **Considerations**: Bundle size vs. feature richness balance
+
+#### Database Integration
+- **Problem**: Potential for dynamic content management and user interactions
+- **Solution**: PostgreSQL with Drizzle ORM setup (currently unused)
+- **Benefits**: Prepared for future features like visitor analytics, dynamic content
+- **Current State**: Infrastructure ready but content is static
+
+#### Responsive Design Strategy
+- **Problem**: Side-scrolling doesn't work well on mobile devices
+- **Solution**: Adaptive layout that switches to vertical scrolling on mobile
+- **Implementation**: CSS breakpoints and JavaScript-based navigation switching
+- **Benefits**: Optimal experience across all device types
