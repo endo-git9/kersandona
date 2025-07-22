@@ -53,9 +53,8 @@ export default function Home() {
       icon: "fas fa-university",
       iconColor: "from-blue-500 to-blue-700",
       achievements: [
-        { value: "+70%", label: "Team Velocity", color: "bg-green-500/20 border border-green-500/50" },
-        { value: "-95%", label: "Defect Reduction", color: "bg-red-500/20 border border-red-500/50" },
-        { value: "-30%", label: "Time to Market", color: "bg-yellow-500/20 border border-yellow-500/50" }
+        { value: "KOPRA", label: "KOPRA by Mandiri", color: "bg-green-500/20 border border-green-500/50" },
+        { value: "WSP", label: "Wholesale Digital Super Platform", color: "bg-blue-500/20 border border-blue-500/50" }
       ],
       skills: ["Scrum Master", "Agile Transformation", "CI/CD", "Team Coaching"]
     },
@@ -287,7 +286,7 @@ export default function Home() {
               <div className="w-8 h-8 bg-gradient-to-br from-game-teal to-game-purple rounded-full flex items-center justify-center">
                 <i className="fas fa-gamepad text-white text-sm"></i>
               </div>
-              <span className="font-bold text-game-teal">Resume Adventure</span>
+              <span className="font-bold text-game-teal">Interactive Resume</span>
             </div>
             
             <div className="hidden md:flex space-x-6">
@@ -301,7 +300,7 @@ export default function Home() {
             
             <div className="flex items-center space-x-2">
               <div className="bg-game-purple/20 px-3 py-1 rounded-full border border-game-purple/50">
-                <span className="text-game-purple text-sm font-medium">Level 99 Product Manager</span>
+                <span className="text-game-purple text-sm font-medium">Professional Portfolio</span>
               </div>
             </div>
           </div>
@@ -512,7 +511,7 @@ export default function Home() {
                 transition={{ delay: 0.3, duration: 0.6 }}
               >
                 <h3 className="text-2xl font-bold mb-6 text-game-yellow text-center">
-                  <i className="fas fa-university mr-2"></i>Academic Foundation
+                  <i className="fas fa-university mr-2"></i>Education
                 </h3>
                 
                 <div className="space-y-6">
@@ -535,12 +534,7 @@ export default function Home() {
                             <p className="text-game-muted text-sm">{edu.institution}</p>
                           </div>
                         </div>
-                        <div className="text-right">
-                          <div className="text-game-yellow text-sm font-semibold">{edu.period}</div>
-                          <div className={`text-xs px-2 py-1 rounded-full ${edu.status === 'In Progress' ? 'bg-yellow-500/20 text-yellow-400' : 'bg-green-500/20 text-green-400'}`}>
-                            {edu.status}
-                          </div>
-                        </div>
+
                       </div>
                       <div className="flex flex-wrap gap-2">
                         {edu.focus.map((focus, focusIndex) => (
@@ -561,7 +555,7 @@ export default function Home() {
                 transition={{ delay: 0.5, duration: 0.6 }}
               >
                 <h3 className="text-2xl font-bold mb-6 text-game-purple text-center">
-                  <i className="fas fa-award mr-2"></i>Certification Arsenal
+                  <i className="fas fa-award mr-2"></i>Certifications
                 </h3>
                 
                 <div className="space-y-4">
