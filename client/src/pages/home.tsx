@@ -609,6 +609,26 @@ export default function Home() {
               <i className="fas fa-scroll mr-2 md:mr-4"></i>Portfolio Quests
             </motion.h2>
             
+            {/* Methodology Page Link */}
+            <motion.div
+              className="text-center mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+            >
+              <a 
+                href="/methodology" 
+                className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-6 py-3 rounded-full font-bold text-white shadow-lg transition-all duration-300 transform hover:scale-105"
+              >
+                <i className="fas fa-rocket text-xl"></i>
+                <span>View Product Development Methodology</span>
+                <i className="fas fa-arrow-right"></i>
+              </a>
+              <p className="text-sm text-game-muted mt-2">
+                Comprehensive crypto product roadmaps, analytics, and technical capabilities
+              </p>
+            </motion.div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pb-24 md:pb-6">
               {portfolioProjects.map((project, index) => (
                 <motion.div
