@@ -1,0 +1,170 @@
+PRD: Interactive Resume Website – Endo Kersandona
+
+"A gamified digital resume that tells a story through side-scrolling levels, combining RPG-style interface and modern UX."
+
+1. Product Name
+
+Endo Kersandona: Resume Adventure
+Website pribadi interaktif bergaya game RPG side-scroller, menampilkan perjalanan karier, skill, dan proyek Endo Kersandona.
+
+---
+
+2. Goals & Objectives
+
+Tujuan	Penjelasan
+
+Menonjol dari CV biasa	Memberikan pengalaman yang berkesan untuk recruiter & klien
+Storytelling yang engaging	Mengubah tiap pengalaman kerja jadi "level petualangan"
+Personal branding kuat	Mewakili sisi kreatif, teknikal, dan kepemimpinan Endo
+CTA yang jelas	Mengarahkan visitor untuk menghubungi, merekrut, atau bekerja sama
+
+---
+
+3. Target User
+
+Segment	Kebutuhan
+
+Recruiter:	 Melihat pengalaman Endo dalam format menarik & interaktif
+Client	Menilai: kemampuan Endo dari project dan peran sebelumnya
+Partner/Startup: Ingin bekerja sama dengan pemimpin produk berpengalaman
+Komunitas:     	 Referensi digital portfolio yang inspiratif
+
+---
+
+4. Core Features
+
+A. Side-Scrolling World Map
+
+Style: Horizontal seperti Mario Bros / Leonardi Resume
+Area dibagi sesuai timeline karier
+Avatar Endo bisa jalan dan berhenti di tiap level
+
+B. Experience Zones
+
+Di setiap level, tampilkan pengalaman kerja utama:
+
+Level	Role	Lokasi	Tahun
+
+🏦 Bank Mandiri: Project Manager, Tahun: 2024–2025
+📜 Privy: Head of Product, Tahun: 2022–2023
+🏢 Tristan Arthamedia: Sr.Product Manager, Tahun: 2021–2022
+🛡 Securemetric: Assistant Manager, Tahun: 2020–2021
+🛠 Trinet: Software Consultant,	Tahun: 2018–2020
+📊 Mitra Infosarana: Product Specialist, Tahun: 2016–2018
+
+
+🔹 Fitur:
+
+Dialog box gaya RPG
+Pencapaian seperti: "+70% Velocity", "-95% Defect", "+30% Revenue"
+Icon tools: Jira, Figma, Trello, Whimsical, Notion, Confluence, Gitlab, Odoo, Datadog, Postman, Kafka, dan tools product management lainnya
+
+
+C. Skill Tree Room
+
+Visualisasi skill seperti pohon kemampuan dalam RPG
+
+Interaktif, bisa hover: tampilkan tooltip
+
+Dibagi dua:
+
+Technical Skills (Agile, Analytics, SDLC, UI/UX)
+
+Tools: Jira, Figma, Trello, Whimsical, Notion, Confluence, Gitlab, Odoo, Datadog, Postman, Kafka, dan tools product management lainnya
+
+
+D. 🏫 Education & Certification Zone
+
+Desain seperti menara/kampus
+
+Klik: tampilkan detail
+
+🎓 S2 Informatika – UPH (AI, Cloud, Blockchain)
+
+🎓 S1 Informatika – UNIB
+
+📜 Sertifikasi:
+Analysis and Analytics
+Design Thinking
+Executive Leadership
+ISO 27001:2022
+Cybersecurity:The Annex A Controls
+Managing Jira Project
+Managing Platform Product
+Data-Driven Learning Design
+Cert Prep: Scrum Master
+IT Security Fondation
+Technical Product Managers
+Artificial Intelligence and Business Strategy
+
+E. Portfolio Zone (Achievements Room)
+
+Tiap project = kartu "quest"
+
+Bisa klik untuk melihat:
+Nama project
+
+
+F. Final Portal (Contact CTA)
+
+“Recruit This Hero 💼”
+Tombol kontak ke:
+Email → kersandona@gmail.com
+LinkedIn → /in/kersandona
+
+---
+
+5. Design Style & UX
+
+Elemen	Gaya
+
+Warna:	  Dark theme + highlight vibrant (teal, kuning, ungu)
+Karakter: Avatar minimalis (flat icon / vector)
+UI/UX:	  Flat vector modern, sedikit animasi smooth
+Mobile:	  Fully responsive, scrollable secara natural
+Visual:   Gunakan efek paralaks & animasi GSAP/Framer Motion
+
+---
+
+6. Tech Stack
+
+Frontend:	HTML/CSS/JS, atau React + Tailwind
+Animation:	GSAP / Framer Motion
+Contact Form:	Formspree / EmailJS
+Optional:	Sound FX → Howler.js
+
+---
+
+7. Feature Breakdown
+
+Fitur
+
+Side-scroller engine (Prioritas:Wajib, Catatan:Custom scroll/animasi)
+Avatar animasi	(Prioritas: Wajib, Catatan: Sederhana)
+Career Zone (Prioritas: Wajib, Catatan: Semua pengalaman kerja)
+Skill Tree (Prioritas: Wajib, Catatan: Visual)
+Portfolio Room	(Prioritas: Penting, Catatan: nice to have)
+Education & Sertifikasi	(Prioritas: Penting, Catatan: Satu halaman cukup)
+Contact Section	(Prioritas: Wajib, Catatan: CTA jelas)
+Musik / Suara (Prioritas: Opsional, Catatan: Untuk fun vibe)
+
+---
+
+8. ✅ Success Metrics
+
+Time on site:	                >1 menit
+Click to contact:               >5% dari visitor
+Positive reaction di LinkedIn:	>20 likes/shares
+Recruiter feedback:	        >Min. 1 engagement positif
+
+---
+
+9. Risiko & Solusi
+
+Risiko	
+Terlalu berat di mobile:	Sousi> Optimasi asset & lazy loading Csolusi
+Visitor bingung navigasi:	Solusi> Petunjuk awal & struktur jelas
+Recruiter tidak paham “game”:	Solusi> Sertakan tombol CV biasa
+Form tidak masuk:	        Solusi > Gunakan service stabil (EmailJS, Formspree)
+
+Implement with modern design gaming, responsive, high resolution
