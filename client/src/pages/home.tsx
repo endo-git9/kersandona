@@ -319,7 +319,7 @@ export default function Home() {
           
           <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6 text-center pt-4 md:pt-8 pb-8 w-full">
             <motion.div 
-              className="avatar-container mb-8 inline-block mt-24"
+              className="avatar-container mb-6 md:mb-8 inline-block mt-16 md:mt-24"
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
               transition={{ duration: 1, type: "spring" }}
@@ -353,7 +353,7 @@ export default function Home() {
                 Proven track record of driving revenue growth, velocity improvements, and leading successful Agile transformations.
               </p>
               
-              <div className="grid grid-cols-3 gap-3 md:gap-4 max-w-md mx-auto mb-6 md:mb-8">
+              <div className="grid grid-cols-3 gap-3 md:gap-4 max-w-md mx-auto mb-4 md:mb-8">
                 <motion.div 
                   className="rpg-dialog rounded-lg p-2 md:p-3 text-center"
                   whileHover={{ scale: 1.05 }}
@@ -378,20 +378,22 @@ export default function Home() {
               </div>
             </motion.div>
             
-            <motion.button 
-              onClick={() => scrollToLevel(1)} 
-              className="bg-gradient-to-r from-game-teal to-game-purple hover:from-game-purple hover:to-game-teal px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg shadow-lg transform hover:scale-105 transition-all duration-300 animate-pulse-glow mb-4"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <i className="fas fa-play mr-2"></i>
-              Start Adventure
-            </motion.button>
-            
-            <div className="text-game-muted text-xs md:text-sm px-4">
-              <i className="fas fa-arrow-right animate-bounce-slow mr-2"></i>
-              <span className="hidden md:inline">Scroll horizontally to explore career journey</span>
-              <span className="md:hidden">Scroll down to explore career journey</span>
+            <div className="-mt-4 md:mt-0">
+              <motion.button 
+                onClick={() => scrollToLevel(1)} 
+                className="bg-gradient-to-r from-game-teal to-game-purple hover:from-game-purple hover:to-game-teal px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg shadow-lg transform hover:scale-105 transition-all duration-300 animate-pulse-glow mb-3 md:mb-4"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <i className="fas fa-play mr-2"></i>
+                Start Adventure
+              </motion.button>
+              
+              <div className="text-game-muted text-xs md:text-sm px-4">
+                <i className="fas fa-arrow-right animate-bounce-slow mr-2"></i>
+                <span className="hidden md:inline">Scroll horizontally to explore career journey</span>
+                <span className="md:hidden">Scroll down to explore career journey</span>
+              </div>
             </div>
           </div>
         </section>
