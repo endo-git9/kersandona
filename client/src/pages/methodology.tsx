@@ -142,6 +142,7 @@ export default function Methodology() {
               { id: 'feedback', label: 'Analytics', icon: 'fas fa-chart-pie' },
               { id: 'budget', label: 'Resources', icon: 'fas fa-coins' },
               { id: 'performance', label: 'Performance', icon: 'fas fa-chart-bar' },
+              { id: 'documents', label: 'BRD/PRD', icon: 'fas fa-file-alt' },
               { id: 'testimonials', label: 'Testimonials', icon: 'fas fa-quote-left' }
             ].map((tab) => (
               <button
@@ -449,6 +450,181 @@ export default function Methodology() {
                 <div className="rpg-dialog rounded-xl p-6 text-center">
                   <div className="text-3xl font-bold text-purple-400 mb-2">5</div>
                   <div className="text-game-muted">Active Sprints</div>
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {/* BRD/PRD Documents */}
+          {activeTab === 'documents' && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="space-y-8"
+            >
+              <h2 className="text-3xl font-bold text-center text-game-teal mb-8">
+                <i className="fas fa-file-alt mr-4"></i>Business & Product Requirements Documentation
+              </h2>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* BRD Section */}
+                <div className="rpg-dialog rounded-xl p-6">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                      <i className="fas fa-building text-white text-2xl"></i>
+                    </div>
+                    <h3 className="text-2xl font-bold text-game-yellow mb-2">
+                      Business Requirements Document (BRD)
+                    </h3>
+                    <p className="text-game-muted text-sm">
+                      Strategic foundation outlining business objectives and key requirements
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="bg-game-darker/30 rounded-lg p-4">
+                      <h4 className="font-bold text-game-teal mb-2 flex items-center">
+                        <i className="fas fa-bullseye mr-2"></i>Business Objectives
+                      </h4>
+                      <p className="text-sm text-game-text">
+                        Increase trading efficiency and security by launching an accessible crypto exchange platform focused on trading and staking.
+                      </p>
+                    </div>
+
+                    <div className="bg-game-darker/30 rounded-lg p-4">
+                      <h4 className="font-bold text-game-purple mb-2 flex items-center">
+                        <i className="fas fa-users mr-2"></i>Key Stakeholders
+                      </h4>
+                      <ul className="text-sm text-game-text space-y-1">
+                        <li>• Development Team: Technical implementation</li>
+                        <li>• Marketing Team: Market campaigns & segments</li>
+                        <li>• Users: Seamless & secure experience</li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-game-darker/30 rounded-lg p-4">
+                      <h4 className="font-bold text-game-yellow mb-2 flex items-center">
+                        <i className="fas fa-chart-line mr-2"></i>Success KPIs
+                      </h4>
+                      <ul className="text-sm text-game-text space-y-1">
+                        <li>• Retention Rate: &gt;75% after 6 months</li>
+                        <li>• Growth Rate: 50% transaction increase (12 months)</li>
+                        <li>• User Churn: Reduce by improving satisfaction</li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-game-darker/30 rounded-lg p-4">
+                      <h4 className="font-bold text-red-400 mb-2 flex items-center">
+                        <i className="fas fa-shield-alt mr-2"></i>Risk Mitigation
+                      </h4>
+                      <ul className="text-sm text-game-text space-y-1">
+                        <li>• Development delays: Additional developers & sprints</li>
+                        <li>• Regulatory compliance: Legal review checkpoints</li>
+                        <li>• Security risks: Multi-layer security framework</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                {/* PRD Section */}
+                <div className="rpg-dialog rounded-xl p-6">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                      <i className="fas fa-cogs text-white text-2xl"></i>
+                    </div>
+                    <h3 className="text-2xl font-bold text-game-yellow mb-2">
+                      Product Requirements Document (PRD)
+                    </h3>
+                    <p className="text-game-muted text-sm">
+                      Detailed feature specifications, user flows, and technical implementation
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="bg-game-darker/30 rounded-lg p-4">
+                      <h4 className="font-bold text-game-teal mb-2 flex items-center">
+                        <i className="fas fa-lightbulb mr-2"></i>Product Vision
+                      </h4>
+                      <p className="text-sm text-game-text">
+                        Secure and user-friendly crypto trading platform with lucrative staking opportunities and multi-currency support.
+                      </p>
+                    </div>
+
+                    <div className="bg-game-darker/30 rounded-lg p-4">
+                      <h4 className="font-bold text-game-purple mb-2 flex items-center">
+                        <i className="fas fa-star mr-2"></i>Key Features
+                      </h4>
+                      <ul className="text-sm text-game-text space-y-1">
+                        <li>• Multi-Currency Wallet: 10+ cryptocurrency storage</li>
+                        <li>• Staking System: Lock tokens for passive rewards</li>
+                        <li>• 2FA Security: Two-factor authentication</li>
+                        <li>• Credit Card Integration: Easy fiat-to-crypto</li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-game-darker/30 rounded-lg p-4">
+                      <h4 className="font-bold text-game-yellow mb-2 flex items-center">
+                        <i className="fas fa-route mr-2"></i>User Flow
+                      </h4>
+                      <div className="text-sm text-game-text">
+                        <p className="mb-2">Complete user journey:</p>
+                        <div className="flex items-center space-x-2 text-xs">
+                          <span className="bg-game-teal/20 px-2 py-1 rounded">Open App</span>
+                          <i className="fas fa-arrow-right text-game-teal"></i>
+                          <span className="bg-game-purple/20 px-2 py-1 rounded">Connect Wallet</span>
+                          <i className="fas fa-arrow-right text-game-purple"></i>
+                          <span className="bg-game-yellow/20 px-2 py-1 rounded">Transaction</span>
+                          <i className="fas fa-arrow-right text-game-yellow"></i>
+                          <span className="bg-green-500/20 px-2 py-1 rounded">Staking</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-game-darker/30 rounded-lg p-4">
+                      <h4 className="font-bold text-green-400 mb-2 flex items-center">
+                        <i className="fas fa-check-circle mr-2"></i>Success Criteria
+                      </h4>
+                      <ul className="text-sm text-game-text space-y-1">
+                        <li>• Transaction processing: &lt;2 seconds</li>
+                        <li>• Staking adoption: 60% users within 3 months</li>
+                        <li>• New signups: 1,000 users/month</li>
+                        <li>• Security: ISO 27001 compliance</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Development Timeline */}
+              <div className="rpg-dialog rounded-xl p-6 mt-8">
+                <h3 className="text-2xl font-bold text-center text-game-yellow mb-6">
+                  <i className="fas fa-calendar-alt mr-3"></i>Development Roadmap & Timeline
+                </h3>
+                
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <span className="text-white font-bold">Q1</span>
+                    </div>
+                    <h4 className="font-bold text-game-teal mb-2">Q1 2025</h4>
+                    <p className="text-sm text-game-text">Multi-currency wallet development and core infrastructure setup</p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <span className="text-white font-bold">Q2</span>
+                    </div>
+                    <h4 className="font-bold text-game-purple mb-2">Q2 2025</h4>
+                    <p className="text-sm text-game-text">Staking system development, testing, and beta user onboarding</p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <span className="text-white font-bold">Q3</span>
+                    </div>
+                    <h4 className="font-bold text-game-yellow mb-2">Q3 2025</h4>
+                    <p className="text-sm text-game-text">2FA security implementation and full platform launch</p>
+                  </div>
                 </div>
               </div>
             </motion.div>
