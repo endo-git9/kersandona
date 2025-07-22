@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useScrollToLevel } from '@/hooks/useScrollToLevel';
+import { usePageView, useAnalytics } from '@/hooks/useAnalytics';
 import { ExperienceCard } from '@/components/ExperienceCard';
 import { SkillNode } from '@/components/SkillNode';
 import { PortfolioCard } from '@/components/PortfolioCard';
@@ -9,6 +10,15 @@ import { ContactForm } from '@/components/ContactForm';
 export default function Home() {
   const scrollToLevel = useScrollToLevel();
   const [activeNavIndex, setActiveNavIndex] = useState(0);
+  const { trackInteraction } = useAnalytics();
+  
+  // Track page view
+  usePageView('/');
+
+  // Track interactions
+  const handleInteraction = (interactionType: string, data: any) => {
+    trackInteraction('/', { type: interactionType, ...data });
+  };
 
   useEffect(() => {
     // Add FontAwesome CSS

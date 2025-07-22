@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useMutation } from '@tanstack/react-query';
+import { apiRequest } from '@/lib/queryClient';
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -16,41 +18,58 @@ export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
+  // Database submission mutation
+  const submitContactMutation = useMutation({
+    mutationFn: async (data: { name: string; email: string; subject: string; message: string }) => {
+      const response = await apiRequest('POST', '/api/contact', data);
+      return response.json();
+    },
+  });
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      // Using EmailJS for contact form submission
-      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          service_id: process.env.VITE_EMAILJS_SERVICE_ID || 'default_service',
-          template_id: process.env.VITE_EMAILJS_TEMPLATE_ID || 'default_template',
-          user_id: process.env.VITE_EMAILJS_PUBLIC_KEY || 'default_key',
-          template_params: {
-            from_name: formData.name,
-            from_email: formData.email,
-            subject: formData.subject,
-            message: formData.message,
-            to_email: 'kersandona@gmail.com'
-          }
-        }),
-      });
+      // Save to database first
+      await submitContactMutation.mutateAsync(formData);
 
-      if (response.ok) {
-        toast({
-          title: "Message Sent Successfully!",
-          description: "Thank you for reaching out. I'll get back to you soon.",
+      // Then try to send via EmailJS as backup
+      try {
+        const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            service_id: import.meta.env.VITE_EMAILJS_SERVICE_ID || 'default_service',
+            template_id: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'default_template',
+            user_id: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'default_key',
+            template_params: {
+              from_name: formData.name,
+              from_email: formData.email,
+              subject: formData.subject,
+              message: formData.message,
+              to_email: 'kersandona@gmail.com'
+            }
+          }),
         });
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        throw new Error('Failed to send message');
+        
+        if (!response.ok) {
+          console.warn('EmailJS failed, but message saved to database');
+        }
+      } catch (emailError) {
+        console.warn('EmailJS service unavailable, but message saved to database:', emailError);
       }
+
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+      setFormData({ name: '', email: '', subject: '', message: '' });
+
     } catch (error) {
+      console.error('Contact submission error:', error);
       toast({
         title: "Failed to Send Message",
         description: "Please try again or contact me directly at kersandona@gmail.com",
