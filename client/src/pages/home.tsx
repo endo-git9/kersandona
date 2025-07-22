@@ -605,18 +605,18 @@ export default function Home() {
         </section>
 
         {/* Level 4: Portfolio Quests */}
-        <section className="level-section bg-gradient-to-br from-game-darker to-purple-900/20 p-6 overflow-y-auto">
+        <section className="level-section bg-gradient-to-br from-game-darker to-purple-900/20 p-4 md:p-6 overflow-y-auto">
           <div className="relative z-10 max-w-6xl mx-auto">
             <motion.h2 
-              className="text-4xl font-bold text-center mb-12 text-game-teal"
+              className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-game-teal"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <i className="fas fa-scroll mr-4"></i>Portfolio Quests
+              <i className="fas fa-scroll mr-2 md:mr-4"></i>Portfolio Quests
             </motion.h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {portfolioProjects.map((project, index) => (
                 <motion.div
                   key={index}
