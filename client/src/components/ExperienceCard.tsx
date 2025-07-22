@@ -9,7 +9,7 @@ interface Achievement {
 interface ExperienceCardProps {
   company: string;
   position: string;
-  period: string;
+  period?: string;
   icon: string;
   iconColor: string;
   achievements: Achievement[];
@@ -40,9 +40,6 @@ export function ExperienceCard({
         <div className="flex-1">
           <div className="flex flex-wrap items-center justify-between mb-4">
             <h3 className="text-2xl font-bold text-game-text">{company}</h3>
-            <span className="achievement-badge px-3 py-1 rounded-full text-game-dark text-sm font-bold">
-              {period}
-            </span>
           </div>
           <p className="text-game-purple font-semibold mb-3">{position}</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">

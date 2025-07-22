@@ -36,7 +36,7 @@ export default function Home() {
     {
       company: "Multiple Company",
       position: "Product Development Lead",
-      period: "Mar 2025 - Present",
+
       icon: "fas fa-rocket",
       iconColor: "from-purple-500 to-pink-700",
       achievements: [
@@ -49,19 +49,18 @@ export default function Home() {
     {
       company: "Bank Mandiri",
       position: "Scrum Master - Project Manager",
-      period: "Feb 2024 - Feb 2025",
+
       icon: "fas fa-university",
       iconColor: "from-blue-500 to-blue-700",
       achievements: [
-        { value: "KOPRA", label: "KOPRA by Mandiri", color: "bg-green-500/20 border border-green-500/50" },
-        { value: "WSP", label: "Wholesale Digital Super Platform", color: "bg-blue-500/20 border border-blue-500/50" }
+        { value: "KOPRA", label: "KOPRA by Mandiri - Wholesale Digital Super Platform", color: "bg-green-500/20 border border-green-500/50" }
       ],
       skills: ["Scrum Master", "Agile Transformation", "CI/CD", "Team Coaching"]
     },
     {
       company: "Privy",
       position: "Head of Product",
-      period: "Aug 2022 - Sept 2023",
+
       icon: "fas fa-shield-alt",
       iconColor: "from-green-500 to-green-700",
       achievements: [
@@ -74,7 +73,7 @@ export default function Home() {
     {
       company: "Tristan Arthamedia",
       position: "Senior Project Manager",
-      period: "Oct 2021 - Aug 2022",
+
       icon: "fas fa-film",
       iconColor: "from-purple-500 to-purple-700",
       achievements: [
@@ -87,7 +86,7 @@ export default function Home() {
     {
       company: "Securemetric Technology",
       position: "Assistant Manager",
-      period: "Oct 2020 - Oct 2021",
+
       icon: "fas fa-lock",
       iconColor: "from-red-500 to-red-700",
       achievements: [
@@ -100,7 +99,7 @@ export default function Home() {
     {
       company: "Trinet",
       position: "PM & Software Consultant",
-      period: "Dec 2018 - Oct 2020",
+
       icon: "fas fa-code",
       iconColor: "from-indigo-500 to-indigo-700",
       achievements: [
@@ -113,7 +112,7 @@ export default function Home() {
     {
       company: "Mitra Infosarana",
       position: "Product Specialist",
-      period: "Apr 2016 - Dec 2018",
+
       icon: "fas fa-chart-line",
       iconColor: "from-teal-500 to-teal-700",
       achievements: [
@@ -364,15 +363,15 @@ export default function Home() {
                   className="rpg-dialog rounded-lg p-2 md:p-3 text-center"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="text-game-teal text-lg md:text-xl font-bold">7</div>
+                  <div className="text-game-teal text-lg md:text-xl font-bold">7+</div>
                   <div className="text-xs text-game-muted">Companies</div>
                 </motion.div>
                 <motion.div 
                   className="rpg-dialog rounded-lg p-2 md:p-3 text-center"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="text-game-purple text-lg md:text-xl font-bold">11</div>
-                  <div className="text-xs text-game-muted">Certifications</div>
+                  <div className="text-game-purple text-lg md:text-xl font-bold">70+</div>
+                  <div className="text-xs text-game-muted">License and certification</div>
                 </motion.div>
               </div>
             </motion.div>
@@ -468,7 +467,7 @@ export default function Home() {
                 transition={{ delay: 0.5, duration: 0.6 }}
               >
                 <h3 className="text-2xl font-bold mb-6 text-game-purple text-center">
-                  <i className="fas fa-toolbox mr-2"></i>Tools Arsenal
+                  <i className="fas fa-toolbox mr-2"></i>Tools
                 </h3>
                 
                 <div className="grid grid-cols-3 gap-4">
