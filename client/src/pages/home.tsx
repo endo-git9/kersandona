@@ -66,9 +66,9 @@ export default function Home() {
       icon: "fas fa-shield-alt",
       iconColor: "from-green-500 to-green-700",
       achievements: [
-        { value: "+30%", label: "Revenue Increase", color: "bg-blue-500/20 border border-blue-500/50" },
-        { value: "+20%", label: "Active Users", color: "bg-purple-500/20 border border-purple-500/50" },
-        { value: "-40%", label: "Negative Feedback", color: "bg-green-500/20 border border-green-500/50" }
+        { value: "SIGN", label: "PrivySign", color: "bg-blue-500/20 border border-blue-500/50" },
+        { value: "LITE", label: "PrivyLite", color: "bg-purple-500/20 border border-purple-500/50" },
+        { value: "CORP", label: "PrivyCorp", color: "bg-green-500/20 border border-green-500/50" }
       ],
       skills: ["Digital Signature", "E-signature", "Product Strategy", "Global Expansion"]
     },
