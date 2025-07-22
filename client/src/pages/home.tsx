@@ -768,7 +768,7 @@ export default function Home() {
             </motion.div>
             
             <motion.div 
-              className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto"
+              className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mb-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.6, duration: 0.6 }}
@@ -790,8 +790,40 @@ export default function Home() {
                 <div className="text-xs text-game-muted">Certifications</div>
               </div>
             </motion.div>
+
+            {/* Quick Access to Methodology */}
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.8, duration: 0.6 }}
+            >
+              <a 
+                href="/methodology" 
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-4 py-2 rounded-full font-semibold text-white shadow-lg transition-all duration-300 transform hover:scale-105"
+              >
+                <i className="fas fa-rocket text-sm"></i>
+                <span>Lihat Product Development Methodology</span>
+              </a>
+            </motion.div>
           </div>
         </section>
+      </div>
+
+      {/* Fixed Methodology Button */}
+      <div className="fixed top-4 right-4 z-50">
+        <motion.a
+          href="/methodology"
+          className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-4 py-2 rounded-full font-bold text-white shadow-lg transition-all duration-300"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <i className="fas fa-rocket"></i>
+          <span className="hidden md:inline">Product Methodology</span>
+          <span className="md:hidden">Methodology</span>
+        </motion.a>
       </div>
 
       {/* Mobile Navigation */}
