@@ -101,7 +101,7 @@ export default function Methodology() {
               <i className="fas fa-rocket text-white text-3xl"></i>
             </div>
             <h1 className="text-4xl md:text-6xl font-black mb-6 gradient-text-rainbow">
-              Product Development Methodology
+              PDLC
             </h1>
             <p className="text-xl text-game-muted max-w-3xl mx-auto">
               Comprehensive crypto product development framework showcasing strategic roadmaps, 

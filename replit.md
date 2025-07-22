@@ -86,7 +86,7 @@ The application is structured for deployment on platforms like Replit:
 
 ### Recent Changes (January 2025)
 
-#### Product Development Methodology Page Addition
+#### PDLC Page Addition
 - **Date**: January 22, 2025
 - **Changes**:
   - Created comprehensive `/methodology` page showcasing crypto product development expertise

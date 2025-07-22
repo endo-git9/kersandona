@@ -621,7 +621,7 @@ export default function Home() {
                 className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-6 py-3 rounded-full font-bold text-white shadow-lg transition-all duration-300 transform hover:scale-105"
               >
                 <i className="fas fa-rocket text-xl"></i>
-                <span>View Product Development Methodology</span>
+                <span>View PDLC</span>
                 <i className="fas fa-arrow-right"></i>
               </a>
               <p className="text-sm text-game-muted mt-2">
@@ -803,7 +803,7 @@ export default function Home() {
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-4 py-2 rounded-full font-semibold text-white shadow-lg transition-all duration-300 transform hover:scale-105"
               >
                 <i className="fas fa-rocket text-sm"></i>
-                <span>Lihat Product Development Methodology</span>
+                <span>Lihat PDLC</span>
               </a>
             </motion.div>
           </div>
@@ -821,7 +821,7 @@ export default function Home() {
           whileTap={{ scale: 0.95 }}
         >
           <i className="fas fa-rocket"></i>
-          <span className="hidden md:inline">Product Methodology</span>
+          <span className="hidden md:inline">PDLC</span>
           <span className="md:hidden">Methodology</span>
         </motion.a>
       </div>
