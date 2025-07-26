@@ -3,7 +3,9 @@ import fs from "fs";
 import path from "path";
 import { createServer as createViteServer, createLogger } from "vite";
 import { type Server } from "http";
-import viteConfig from "../vite.config";
+// --- PERUBAHAN PENTING DI SINI ---
+// Sekarang vite.config.ts ada di client/, jadi path impornya berubah
+import viteConfig from "../client/vite.config"; // Mengimpor vite.config dari client/
 import { nanoid } from "nanoid";
 
 const viteLogger = createLogger();
@@ -27,7 +29,7 @@ export async function setupVite(app: Express, server: Server) {
   };
 
   const vite = await createViteServer({
-    ...viteConfig,
+    ...viteConfig, // Menggunakan viteConfig yang diimpor dari ../client/vite.config
     configFile: false,
     customLogger: {
       ...viteLogger,
@@ -45,6 +47,10 @@ export async function setupVite(app: Express, server: Server) {
     const url = req.originalUrl;
 
     try {
+      // Path ke index.html di client/
+      // import.meta.dirname di sini adalah 'path/to/repo/server'
+      // Untuk mencapai 'path/to/repo/client/index.html', perlu naik satu level (..)
+      // lalu masuk ke 'client/index.html'
       const clientTemplate = path.resolve(
         import.meta.dirname,
         "..",
@@ -68,7 +74,11 @@ export async function setupVite(app: Express, server: Server) {
 }
 
 export function serveStatic(app: Express) {
-  const distPath = path.resolve(import.meta.dirname, "public");
+  // --- PERUBAHAN PENTING DI SINI ---
+  // import.meta.dirname di server/vite.ts adalah 'path/to/repo/server'
+  // Untuk mencari di 'path/to/repo/dist/public', kita perlu naik satu level (..)
+  // dari 'server/' lalu masuk ke 'dist/public'.
+  const distPath = path.resolve(import.meta.dirname, "..", "dist", "public"); // <-- BARIS INI YANG DIUBAH
 
   if (!fs.existsSync(distPath)) {
     throw new Error(
