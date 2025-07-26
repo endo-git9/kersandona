@@ -10,6 +10,11 @@ export default defineConfig({
     ...(process.env.NODE_ENV !== "production" &&
     process.env.REPL_ID !== undefined
       ? [
+          // Perhatikan: 'await import' hanya boleh di level atas atau dalam async function.
+          // Pastikan ini tidak menyebabkan masalah jika Anda mengimpornya secara sinkron.
+          // Biasanya, plugin Vite diatur secara sinkron.
+          // Jika ada error, Anda mungkin perlu menyesuaikan bagaimana plugin ini diimpor.
+          // Untuk deployment Vercel, bagian ini mungkin tidak relevan jika NODE_ENV adalah production.
           await import("@replit/vite-plugin-cartographer").then((m) =>
             m.cartographer(),
           ),
@@ -18,14 +23,24 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": path.resolve(import.meta.dirname, "client", "src"),
-      "@shared": path.resolve(import.meta.dirname, "shared"),
-      "@assets": path.resolve(import.meta.dirname, "attached_assets"),
+      // Pastikan path ini benar relatif terhadap lokasi client/vite.config.ts
+      // __dirname akan lebih tepat di CommonJS, import.meta.dirname di ES Modules.
+      // Jika ini file .ts, TypeScript mungkin perlu dikonfigurasi untuk memahaminya.
+      // Jika Anda mengalami masalah, coba ganti import.meta.dirname dengan __dirname jika build setup Anda mendukungnya.
+      // Atau, pastikan tsconfig.json Anda mengizinkan 'moduleResolution': 'bundler' atau 'node'.
+      "@": path.resolve(import.meta.dirname, "src"), // Mengacu ke client/src
+      "@shared": path.resolve(import.meta.dirname, "..", "shared"), // Mengacu ke shared/
+      "@assets": path.resolve(import.meta.dirname, "..", "attached_assets"), // Mengacu ke attached_assets/
     },
   },
-  root: path.resolve(import.meta.dirname, "client"),
+  root: path.resolve(import.meta.dirname), // Root proyek Vite adalah direktori 'client'
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    // --- PERUBAHAN PENTING DI SINI ---
+    // outDir ini akan menempatkan hasil build Vite di 'dist/public' di root repositori
+    // import.meta.dirname di client/vite.config.ts adalah 'path/to/repo/client'
+    // '..' akan naik ke 'path/to/repo/'
+    // kemudian masuk ke 'dist/public'
+    outDir: path.resolve(import.meta.dirname, "..", "dist", "public"), // Path final: kersandona/dist/public
     emptyOutDir: true,
   },
   server: {
